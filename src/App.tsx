@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Outlet } from 'react-router-dom';
-import { AppShell, Text, useMantineTheme } from '@mantine/core';
+import { AppShell, MantineProvider, Text, useMantineTheme } from '@mantine/core';
 import { menus } from './pages/menus';
 import Footer from './components/Footer';
 import Header from './components/Header';
@@ -24,6 +24,6 @@ export default function App() {
 			header={<Header opened={opened} setOpened={setOpened} />}
 		>
 			<Outlet />
-		</AppShell>
+		</AppShell>	
 	);
 }

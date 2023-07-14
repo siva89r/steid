@@ -1,3 +1,5 @@
+import { IconCoin, IconDiscount2, IconReceipt2, IconUserPlus } from "@tabler/icons-react";
+
 export interface NavbarProps {
 	opened: boolean;
 	menus: Menu[];
@@ -14,6 +16,16 @@ export interface Menu {
 	initiallyOpened?: boolean;
 	children?: ChildMenu[];
 }
+
+const icons = {
+	user: IconUserPlus,
+	discount: IconDiscount2,
+	receipt: IconReceipt2,
+	coin: IconCoin,
+  };
+interface StatsGridProps {
+	data: { title: string; icon: keyof typeof icons; value: string; diff: number }[];
+  }
 
 export interface ChildMenu {
 	label: string;

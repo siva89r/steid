@@ -4,6 +4,8 @@ import {
   IconUsers,
   IconFolder,
   IconTools,
+  IconSettings,
+  IconMedal,
 } from "@tabler/icons-react";
 import { Menu } from "../utils/interface";
 
@@ -22,16 +24,23 @@ export const menus: Menu[] = [
       { label: "Reports Graph", link: "/TestReports/reportsGraph" },
     ],
   },
-  { label: "Users", icon: IconUsers, link: "/users" },
-  { label: "File Library", icon: IconFolder, link: "/files" },
+  {
+    label: "Test Execution",
+    icon: IconTools,
+    children: [
+      { label: "Test Case Execution", link: "/users" },
+      { label: "phone Book", link: "/files" },
+      { label: "Mobile Device Testing", link: "/files" },
+    ],
+  },
   {
     label: "Settings",
-    icon: IconTools,
+    icon: IconSettings,
     children: [
       { label: "Project Settings", link: "/settings/project" },
       { label: "Data Model", link: "/settings/data-modal" },
-      { label: "Roles & Permissions", link: "/settings/roles" },
+      { label: "Roles & Permissions", link: "/settings/roles"},
     ],
   },
-  { label: "About", icon: IconTools, link: "/general/about" },
+  { label: "About", icon: IconMedal, link: "/general/about" },
 ];
