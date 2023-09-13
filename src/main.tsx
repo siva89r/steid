@@ -9,6 +9,7 @@ import App from './App';
 import ErrorPage from './pages/ErrorPage';
 import Dashboard from './pages/Dashboard';
 import { Login } from './pages/Login';
+import DebugWindow from './pages/Reports/DebugWindow';
 
 const queryClient = new QueryClient({
 	defaultOptions: {
@@ -29,8 +30,8 @@ const router = createBrowserRouter([
 				element: <Dashboard />,
 			},
 			{
-				path: 'content',
-				element: <div>Content</div>,
+				path: 'RecordDetails',
+				element: <DebugWindow />,
 			},
 			{
 				path: 'users',

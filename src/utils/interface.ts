@@ -6,7 +6,8 @@ export interface NavbarProps {
 }
 export interface HeaderProps {
 	opened: boolean;
-	setOpened: React.Dispatch<React.SetStateAction<boolean>>;
+	// setOpened: React.Dispatch<React.SetStateAction<boolean>>;
+	setDrawerOpened: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export interface Menu {
@@ -23,7 +24,7 @@ const icons = {
 	receipt: IconReceipt2,
 	coin: IconCoin,
   };
-interface StatsGridProps {
+export interface StatsGridProps {
 	data: { title: string; icon: keyof typeof icons; value: string; diff: number }[];
   }
 

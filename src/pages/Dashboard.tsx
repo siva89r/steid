@@ -3,9 +3,6 @@ import { createStyles, Grid, Card, Text, Group, Menu, ActionIcon, rem } from "@m
 import Area from "../components/charts/Area";
 import { IconDots, IconEdit, IconEye, IconFileZip, IconTrash } from "@tabler/icons-react";
 import { StatsGrid } from "./statswidgets";
-import dataForStatsWidgets from "./tempData";
-import { StatsGridProps } from "../utils/interface";
-
 
 
 const useStyles = createStyles((theme) => ({

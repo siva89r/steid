@@ -14,7 +14,7 @@ import { IconSun, IconMoonStars } from '@tabler/icons-react';
 
 import { HeaderProps } from '../utils/interface';
 
-export default function Header({ opened, setOpened }: HeaderProps) {
+export default function Header({ opened, setDrawerOpened }: HeaderProps) { 
 	const { colorScheme, toggleColorScheme } = useMantineColorScheme();
 	const theme = useMantineTheme();
 
@@ -23,7 +23,8 @@ export default function Header({ opened, setOpened }: HeaderProps) {
 			<div style={{ display: 'flex', alignItems: 'center', height: '100%', justifyContent: 'space-between' }}>
 				<Group>
 					<MediaQuery largerThan="sm" styles={{ display: 'none' }}>
-						<Burger opened={opened} onClick={() => setOpened((o) => !o)} size="sm" mr="xl" />
+						{/* <Burger opened={opened} onClick={() => setOpened((o) => !o)} size="sm" mr="xl" /> */}
+						<Burger opened={opened} onClick={() => setDrawerOpened((o) => !o)} size="sm" mr="lg" />
 					</MediaQuery>
 					{/* <Text>Application Logo</Text> */}
 					<Text>SoftTest</Text>
