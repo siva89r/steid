@@ -56,7 +56,7 @@ return (
     <>
     <Group>
         <Text>Record ID : {recordQuery.data.id}</Text>
-        <Text>Record Name : {recordQuery.data.name}</Text>
+        <Text>Record Name : {recordQuery.data.recordName}</Text>
         <Text>Record Name : {recordQuery.data.createdBy}</Text>
     </Group>
 

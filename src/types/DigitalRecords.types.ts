@@ -1,5 +1,5 @@
 interface IDigitalRecords {
     id:number;
-    name: string;
+    recordName: string;
     createdBy: string;
 }

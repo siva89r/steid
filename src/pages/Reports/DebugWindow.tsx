@@ -1,7 +1,8 @@
-import { Anchor, Breadcrumbs, Button, Group, Paper, createStyles, Text, Tabs } from "@mantine/core";
+import { Anchor, Breadcrumbs, Button, Group, Paper, createStyles, Text, Tabs, Card } from "@mantine/core";
 import { IconMessageCircle, IconPhoto, IconSettings } from "@tabler/icons-react";
 import React from "react";
 import RecordInfo from "./RecordInfo";
+import dashcss from "./../../assets/styles/dashboardDesign.module.css";
 
 
 const useStyles = createStyles((theme)=> ({
@@ -11,21 +12,25 @@ const useStyles = createStyles((theme)=> ({
     }
 }));
 
-export default function DebugWindow(){
+export default function DebugWindow(){ 
     const {classes, theme } = useStyles();
-    const breadcrumItems =[
-        {title: 'Debug window', href: '/DebugWindow' },
-    ].map((item,index) => (
-        <Anchor bg={theme.colors.grey[0]} href={item.href} key={index}>
-            {item.title}
-        </Anchor>
-    ));
+    // const breadcrumItems =[
+    //     {title: 'Debug window', href: '/DebugWindow' },
+    // ].map((item,index) => (
+    //     <Anchor bg={theme.colors.grey[0]} href={item.href} key={index}>
+    //         {item.title}
+    //     </Anchor>
+    // ));
 
 const recordId = 33309817;
 return (
     <>
+    <Card classNames={dashcss.Card}>
+
+    <Text fz={"sm"}>Record ID: </Text>
+    </Card>
     <Group position="left" mt={"-1rem"}>
-        <Breadcrumbs p={"xs"} fw={700} ff={"sans-serif"} fs={"italic"}>{breadcrumItems}</Breadcrumbs>
+        {/* <Breadcrumbs p={"xs"} fw={700} ff={"sans-serif"} fs={"italic"}>{breadcrumItems}</Breadcrumbs> */}
         <Button variant="light" size="xs" m={"1xp"}  className={classes.newButtonForWidget}>
             <Group>
                 <Text fz={"sm"}>Record ID: </Text>

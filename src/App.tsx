@@ -7,6 +7,7 @@ import Header from './components/Header';
 import Navbar from './components/Navbar';
 import { IconFingerprint, IconGauge } from '@tabler/icons-react';
 import { useDisclosure } from '@mantine/hooks';
+import './app.css';
 
 export default function App() {
 	const theme = useMantineTheme();
@@ -31,6 +32,8 @@ export default function App() {
         onClose={close}
         title="Side Menu"
         transitionProps={{ transition: 'rotate-left', duration: 150, timingFunction: 'linear' }}
+		overlayProps={{ opacity: 0 }}
+		shadow='xl'
       >
 		<NavLink label="Dashboard" 
 			variant='light'
